@@ -1,0 +1,31 @@
+
+.connect {
+	background-color: $purple;
+	color: lighten( $grey, 60% );
+	
+	.inner {
+		background: $purple url(../img/bg-tower.jpg) bottom center no-repeat;
+		background-size: cover;
+		padding: 20px;
+	}
+
+	p.intro {
+		padding: 10px 3%;
+	}
+
+	a {
+		color: white;
+	}
+
+	@include respond-to( 768px ) {		
+		.inner {
+			padding: 30px 20% 50px 30px;
+		}
+	}
+
+	@include respond-to( 1024px ) {
+		.inner {
+			padding: 40px 30% 50px 70px;
+		}
+	}
+}

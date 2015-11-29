@@ -1,0 +1,139 @@
+
+
+body {
+	margin-top: 0;
+	.csstransitions & {
+		@include prefix( "transition", "margin 300ms ease-in-out" );
+	}
+
+	@include respond-to( 769px ) { margin-top: 76px; }
+
+	&.open {
+		margin-top: 200px;
+		@include respond-to( 500px ) { margin-top: 168px; }
+		@include respond-to( 769px ) { margin-top: 76px; }
+	}
+}
+
+
+nav {
+	background: $purple;
+	border-bottom: 10px solid $grey;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1000;
+	@include clearfix;
+	
+	.boxshadow & {
+		@include prefix( "box-shadow", "0 8px 0 rgba( 0, 0, 0, 0.3)" );
+	}
+
+	ul {
+		text-align: center;
+		height: 0;
+		overflow: hidden;
+		.csstransitions & {
+			@include prefix( "transition", "height 300ms ease-in-out" );
+		}
+		
+		@include respond-to( 769px ) { height: 76px; }
+
+		&.open {
+			height: 204px;
+			@include respond-to( 500px ) { height: 112px; }
+		}
+
+		li {
+			display: inline;
+
+			a {
+				@include font-title;
+				padding: 12px 0;
+				color: white;
+				text-decoration: none;
+				display: inline-block;
+				float: left;
+				width: 50%;
+				border: 1px solid darken( $purple, 5% );
+				border-left: 0;
+				border-top: 0;
+				line-height: 16px;
+				font-size: 18px;
+				text-transform: uppercase;
+
+				@include respond-to( 500px ) {
+					width: 33.3333%;
+					padding: 20px 0;
+				}
+
+				@include respond-to( 769px ) {
+					width: 16%;
+					padding: 30px 0;
+					float: none;
+					border: 0;
+				}
+
+				.csstransitions &, 
+				.csstransitions &:after, 
+				.csstransitions &:before { 
+					@include prefix( "transition", "all 300ms ease-in-out" );
+				}
+
+				&:hover:before, &:hover:after { color: black; }
+
+				&:hover {
+					background: lighten( $purple, 5% );
+					color: lighten( $purple, 50% );
+				}
+			}
+
+			@include respond-to( 769px ) {
+				&:last-child a {
+					width: 12%;
+					@include font-cursive;
+					text-transform: lowercase;
+					font-size: 30px;
+					letter-spacing: 2px;
+				}
+			}
+
+
+		}
+
+	}
+
+	.menu-toggle {
+		position: absolute;
+		bottom: -50px;
+		left: 20px;
+		padding: 0;
+		width: 50px;
+		height: 50px;
+		display: block;
+		text-indent: -200px;
+		overflow: hidden;
+		cursor: pointer;
+		border: 0;
+		
+		&, &:hover {
+			background: $purple url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAMAAACgaw2xAAAAQlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////8IX9KGAAAAFXRSTlMAsfS51A2+6cnu0ds/UQcva7D7E8RTPvJoAAAAW0lEQVQY063POQKAIAwF0W+ComwqkPtfVWsSOl453SATeYUoo4qpwovJI7lwKsElLFXslLgfSucEEhNBJpBDDG7wpwyUtiutYKWb+d0GL/ONKKY4/3iELoXk+QCXmhAnR7E6TAAAAABJRU5ErkJggg==) center center no-repeat;
+			@include prefix( "box-shadow", "0 5px 0 rgba( 0, 0, 0, 0.2 )" );
+			@include prefix( "border-radius", "0px 0px 30% 30%" );
+		}
+
+		@include respond-to( 500px ) {
+			width: 70px;
+			height: 70px;
+			bottom: -70px;
+		}
+
+		@include respond-to( 769px ) {
+			display: none;
+		}
+
+	}
+
+}
+
