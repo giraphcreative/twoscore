@@ -307,10 +307,36 @@ section#press {
 		padding: 20px;
 
 		.amanda-photo {
+			position: relative;
 			background: url(../img/photo-card.jpg) bottom center no-repeat;
 			background-size: cover;
 			height: 450px;
 			margin: 0 -20px;
+
+			.photo-info {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				text-align: right;
+				padding: 10px 20px;
+				color: white;
+				text-shadow: 0 0 10px $grey;
+				background: rgba( black, .3 );
+				
+				@include respond-to( 600px ) {
+					padding: 10px 30px;
+				}
+
+				.photo-credit {
+					font-size: .8em;
+					opacity: .7;
+
+					a {
+						color: white;
+					}
+				}
+			}
 		}
 	}
 
@@ -368,10 +394,35 @@ section#about {
 		background-color: #e6e7e8;
 
 		.amanda-photo {
+			position: relative;
 			background: url(../img/photo-cat.jpg) bottom center no-repeat;
 			background-size: cover;
 			height: 450px;
 			margin: 0 -20px;
+
+			.photo-info {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				padding: 10px 20px;
+				color: white;
+				text-shadow: 0 0 10px $grey;
+				background: rgba( black, .3 );
+				
+				@include respond-to( 600px ) {
+					padding: 10px 30px;
+				}
+
+				.photo-credit {
+					font-size: .8em;
+					opacity: .7;
+
+					a {
+						color: white;
+					}
+				}
+			}
 		}
 	}
 
@@ -461,10 +512,11 @@ footer {
 	background-size: cover;
 	box-shadow: 3px 3px 40px rgba( 0, 0, 0, 0.5 ) inset;
 	border-radius: 50%;
-	width: 98%;
+	width: 300px;
+	display: inline-block;
 
+	/*
 	@include respond-to( 480px ) {
-		float: left;
 		width: 48%;
 	}
 
@@ -475,7 +527,8 @@ footer {
 	@include respond-to( 1024px ) {
 		width: 23%;
 	}
-	
+	*/
+
 	& img {
 		width: 100%;
 		position: absolute;
@@ -508,7 +561,7 @@ footer {
 	}
 
 	.caption {
-		padding: 11% 14%;
+		padding: 15% 14%;
 		position: absolute;
 		top: 0;
 		left: 100%;
