@@ -469,10 +469,17 @@ footer {
 	background: lighten( $grey, 20% );
 	padding: 20px;
 	color: white;
+	text-align: center;
 	@include clearfix;
 
 	a {
 		color: white;
+	}
+	
+	.credit {
+		padding-top: 15px;
+		font-size: .8em;
+		opacity: .7;
 	}
 
 	.social {
@@ -482,6 +489,8 @@ footer {
 	}
 
 	@include respond-to( 600px ) {
+		text-align: left;
+
 		.address, .logo {
 			width: 50%;
 			float: left;
