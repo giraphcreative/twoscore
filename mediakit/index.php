@@ -39,7 +39,7 @@ if( !$title ) { $title = cleanTitle(basename(dirname(__FILE__))); }
 		.wrap { max-width: 600px; margin: 20px auto; background: white; padding: 40px; box-shadow: 0 0 2px #ccc; }
 		@media only screen and (max-width: 700px) { .wrap { padding: 15px; } }
 		h1 { text-align: center; margin: 40px 0; font-size: 22px; font-weight: bold; color: #666; }
-		a { color: #399ae5; text-decoration: none; } a:hover { color: #206ba4; text-decoration: none; }
+		a { color: #904B8D; text-decoration: none; } a:hover { color: #9B5F9B; text-decoration: none; }
 		.note { padding:  0 5px 25px 0; font-size:80%; color: #666; line-height: 18px; }
 		.block { clear: both;  min-height: 50px; border-top: solid 1px #ECE9E9; }
 		.block:first-child { border: none; }
