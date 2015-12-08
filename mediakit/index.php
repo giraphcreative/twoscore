@@ -73,7 +73,7 @@ if( !$title ) { $title = cleanTitle(basename(dirname(__FILE__))); }
 	</style>
 </head>
 <body>
-<h1><?php echo $title ?></h1>
+<h1><img src="/img/logo.png" title="<?php echo $title ?>"></h1>
 <div class="wrap">
 <?php
 
