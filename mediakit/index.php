@@ -5,7 +5,7 @@
 // THINGS TO CHANGE: 
 
 	// TITLE OF PAGE
-	$title = "Media Kit";
+	$title = "TwoScore Media Kit";
 
 	// ADD SPECIFIC FILES YOU WANT TO IGNORE HERE
 	$ignore_file_list = array( ".htaccess", "Thumbs.db", ".DS_Store", "index.php" );
